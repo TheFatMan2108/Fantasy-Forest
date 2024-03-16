@@ -11,6 +11,8 @@ public class Move : MonoBehaviour
     [SerializeField] float tocDo = 10f;
     [SerializeField] float nhay = 16f;
     [SerializeField] Animator animator;
+    [SerializeField] private MeshRenderer listMaterial;
+    private float tocDoMap;
     public static int jumpCount = 1;
     public static int jump;
     private float ngang = 0f;
@@ -18,22 +20,39 @@ public class Move : MonoBehaviour
     void Start()
     {
         jump = jumpCount;
+        tocDoMap = 100f;
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(ngang * tocDo, rb.velocity.y);
-        flip();
-        animator.SetFloat("Jump",rb.velocity.y);
+        rb.velocity = new Vector2(tocDo, rb.velocity.y);
+        animator.SetBool("isRun", true);
+        animator.SetFloat("Jump", rb.velocity.y);
         animator.SetBool("isChamDat", isChamDat.chamDat);
-       
+        mapRun();
     }
 
-    private void flip()
+    private void mapRun()
     {
-        if (ngang!=0)
+/*        listMaterial.transform.position = new Vector3(
+            transform.position.x
+            , listMaterial.transform.position.y
+            , listMaterial.transform.position.z);*/
+        foreach (Material mr in listMaterial.materials)
         {
-            transform.localScale = new Vector3(ngang,transform.localScale.y);
+            mr.mainTextureOffset = new Vector2(transform.position.x / (tocDoMap -= 20), transform.position.y/100);
+        }
+        if (tocDoMap <= 20)
+        {
+            tocDoMap = 100f;
+        }
+    }
+
+    private void Flip()
+    {
+        if (ngang != 0)
+        {
+            transform.localScale = new Vector3(ngang, transform.localScale.y);
         }
         else
         {
@@ -41,12 +60,12 @@ public class Move : MonoBehaviour
         }
     }
 
-    public void onMove(InputAction.CallbackContext context)
+    public void OnMove(InputAction.CallbackContext context)
     {
         ngang = context.ReadValue<Vector2>().x;
         animator.SetBool("isRun", true);
     }
-    public void onJump(InputAction.CallbackContext context)
+    public void OnJump(InputAction.CallbackContext context)
     {
         if (jump <= 0)
         {
@@ -55,13 +74,13 @@ public class Move : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                rb.velocity = new Vector2(rb.velocity.x,nhay);
-                jump --;
+                rb.velocity = new Vector2(rb.velocity.x, nhay);
+                jump--;
                 break;
-            case InputActionPhase.Canceled: 
+            case InputActionPhase.Canceled:
                 break;
         }
     }
 
-    
+
 }

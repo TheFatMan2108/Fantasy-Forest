@@ -168,6 +168,17 @@
                 },
                 {
                     "name": "",
+                    "id": "93cda928-9397-45f5-af71-0ec380cad4ec",
+                    "path": "<Touchscreen>/primaryTouch/tap",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "aa0a0259-0f14-4c21-99b6-c3895e08b0e7",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
