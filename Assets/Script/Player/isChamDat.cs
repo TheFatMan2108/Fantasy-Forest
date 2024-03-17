@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class isChamDat : MonoBehaviour
 {
    public static bool chamDat = false;
+    [SerializeField] private SettingMusicAndSound setting;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -17,8 +18,7 @@ public class isChamDat : MonoBehaviour
         }
         if (collision.CompareTag("DeadPoint"))
         {
-            // * Thêm màn hình dead scene khi rảnh *
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+           setting.OnMenuDead();
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
