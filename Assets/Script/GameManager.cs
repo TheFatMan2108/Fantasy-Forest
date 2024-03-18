@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private float vollumMusic;
     private float vollumSound;
     private int frameRate;
+    private bool isPlaying = false;
     private string KEY_HIGHSCORE = "HighScore";
     private string KEY_MUSIC = "music";
     private string KEY_SOUND = "sound";
@@ -50,6 +51,10 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt(KEY_HIGHSCORE,highScore);
         }
     }
+    public void SetPLaying(bool nPlaying)
+    {
+        isPlaying = nPlaying;
+    }
     // GET
     public float GetMusicVollum()
     {
@@ -66,5 +71,9 @@ public class GameManager : MonoBehaviour
     public int GetScore()
     {
         return Score;
+    }
+    public bool GetPlaying()
+    {
+        return isPlaying;
     }
 }

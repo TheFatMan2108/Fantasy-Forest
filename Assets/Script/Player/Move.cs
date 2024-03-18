@@ -8,22 +8,24 @@ using UnityEngine.UIElements;
 public class Move : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float tocDo = 10f;
     [SerializeField] private float nhay = 16f;
     [SerializeField] private Animator animator;
     [SerializeField] private MeshRenderer listMaterial;
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameObject tochToPlay;
+    private float tocDo = 0;
     private float tocDoMap;
     public static int jumpCount = 1;
     public static int jump;
     private float ngang = 0f;
     private RunAudio audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
         jump = jumpCount;
         tocDoMap = 100f;
         audioManager = RunAudio.instance;
-        animator.SetBool("isRun", true);
     }
 
     private void FixedUpdate()
@@ -39,7 +41,7 @@ public class Move : MonoBehaviour
 
         foreach (Material mr in listMaterial.materials)
         {
-            mr.mainTextureOffset = new Vector2(transform.position.x / (tocDoMap -= 20), transform.position.y/100);
+            mr.mainTextureOffset = new Vector2(transform.position.x / (tocDoMap -= 20), transform.position.y / 100);
         }
         if (tocDoMap <= 20)
         {
@@ -62,8 +64,19 @@ public class Move : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                rb.velocity = new Vector2(rb.velocity.x, nhay);
-                jump--;
+                if (!gameManager.GetPlaying())
+                {
+                    gameManager.SetPLaying(true);
+                    tocDo = 7f;
+                    animator.SetBool("isRun", true);
+                    tochToPlay.SetActive(false);
+                }
+                else
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, nhay);
+                    jump--;
+                }
+
                 break;
             case InputActionPhase.Canceled:
                 break;
@@ -80,7 +93,7 @@ public class Move : MonoBehaviour
     }
     public void PlayRun()
     {
-        if (audioManager==null)
+        if (audioManager == null)
         {
             Debug.Log("Bị null");
             return;

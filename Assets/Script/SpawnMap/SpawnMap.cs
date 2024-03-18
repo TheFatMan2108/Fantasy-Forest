@@ -43,14 +43,14 @@ public class SpawnMap : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            int indexMap = UnityEngine.Random.Range(0, 2);
+            int indexMap = UnityEngine.Random.Range(0, mapSpawn.Count);
             maps.Add(SpawnMaps(mapSpawn[indexMap]));
         }
     }
     private GameObject SpawnMaps(GameObject map)
     {
         float spaceMapX = UnityEngine.Random.Range(2,4);
-        float spaceMapY = UnityEngine.Random.Range(-1,3);
+        float spaceMapY = UnityEngine.Random.Range(-2,2);
         return Instantiate(map, maps[maps.Count - 1].transform.Find("EndPoint").
             transform.position+new Vector3(spaceMapX,spaceMapY)
             , Quaternion.identity, transform);

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
-    [SerializeField] private GameObject audioManager;
     public void LoadScene(string name)
     {
         SceneManager.LoadScene(name);
@@ -13,7 +12,6 @@ public class NextScene : MonoBehaviour
 
     public void StartGame()
     {
-        DontDestroyOnLoad(audioManager);
         SceneManager.LoadScene("MainScene");
     }
 
