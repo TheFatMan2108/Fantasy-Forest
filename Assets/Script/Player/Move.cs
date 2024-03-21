@@ -13,9 +13,10 @@ public class Move : MonoBehaviour
     [SerializeField] private MeshRenderer listMaterial;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject tochToPlay;
+    [SerializeField] private SettingMusicAndSound setting;
     private float tocDo = 0;
     private float tocDoMap;
-    public static int jumpCount = 1;
+    public static int jumpCount = 2;
     public static int jump;
     private float ngang = 0f;
     private RunAudio audioManager;
@@ -31,14 +32,19 @@ public class Move : MonoBehaviour
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(tocDo, rb.velocity.y);
-        animator.SetFloat("Jump", rb.velocity.y);
-        animator.SetBool("isChamDat", isChamDat.chamDat);
         MapRun();
     }
-
+    private void Update()
+    {
+        animator.SetFloat("Jump", rb.velocity.y);
+        animator.SetBool("isChamDat", isChamDat.chamDat);
+    }
     private void MapRun()
     {
-
+        if (listMaterial==null)
+        {
+            return;
+        }
         foreach (Material mr in listMaterial.materials)
         {
             mr.mainTextureOffset = new Vector2(transform.position.x / (tocDoMap -= 20), transform.position.y / 100);
@@ -69,12 +75,17 @@ public class Move : MonoBehaviour
                     gameManager.SetPLaying(true);
                     tocDo = 7f;
                     animator.SetBool("isRun", true);
-                    tochToPlay.SetActive(false);
+                    if (tochToPlay != null)
+                    {
+                        tochToPlay.SetActive(false);
+                    }
+
                 }
                 else
                 {
                     rb.velocity = new Vector2(rb.velocity.x, nhay);
                     jump--;
+                    PlayJump();
                 }
 
                 break;
@@ -117,5 +128,39 @@ public class Move : MonoBehaviour
             return;
         }
         audioManager.PlaySound("Jump");
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // cơ chế dẫm đầu quái thì quái chết
+        /*if (collision.transform.Find("HeadPlant").transform.CompareTag("HeadPlant"))
+        {
+            Debug.Log("Quai chet");
+            int score = gameManager.GetScore();
+            gameManager.SetScore(score += 200);
+            Destroy(collision.transform.parent.gameObject);
+
+        }*/
+       
+        if (collision.transform.Find("Body").transform.CompareTag("DeadPoint"))
+        {
+            if (setting==null)
+            {
+                return;
+            }
+            setting.OnMenuDead();
+        }
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DeadPoint"))
+        {
+            Debug.Log("chet : Bị bắn");
+            if (setting == null)
+            {
+                return;
+            }
+            setting.OnMenuDead();
+        }
     }
 }

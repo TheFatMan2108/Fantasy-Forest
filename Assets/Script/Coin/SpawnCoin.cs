@@ -8,7 +8,7 @@ public class SpawnCoin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int soLuongCoin = UnityEngine.Random.Range(3,6);
+        int soLuongCoin = UnityEngine.Random.Range(3,10);
         float spaceCoin = transform.position.x;
         for (int i = 0; i < soLuongCoin; i++)
         {

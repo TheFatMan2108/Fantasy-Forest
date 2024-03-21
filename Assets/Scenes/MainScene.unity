@@ -3904,22 +3904,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 842978440186770996, guid: 878d373b5718953498c3b5976e17085a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3683767388773190742, guid: 878d373b5718953498c3b5976e17085a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683767388773190742, guid: 878d373b5718953498c3b5976e17085a, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5168307989976730354, guid: 878d373b5718953498c3b5976e17085a, type: 3}
       propertyPath: setting
       value: 
       objectReference: {fileID: 1505206491}
+    - target: {fileID: 5168307989976730354, guid: 878d373b5718953498c3b5976e17085a, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 554562642}
     - target: {fileID: 8205501242169189814, guid: 878d373b5718953498c3b5976e17085a, type: 3}
       propertyPath: m_SortingOrder
       value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236750024689822805, guid: 878d373b5718953498c3b5976e17085a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.201
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236750024689822805, guid: 878d373b5718953498c3b5976e17085a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 8823003403001593128, guid: 878d373b5718953498c3b5976e17085a, type: 3}
       propertyPath: tocDo
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8823003403001593128, guid: 878d373b5718953498c3b5976e17085a, type: 3}
+      propertyPath: setting
+      value: 
+      objectReference: {fileID: 1505206491}
     - target: {fileID: 8823003403001593128, guid: 878d373b5718953498c3b5976e17085a, type: 3}
       propertyPath: tochToPlay
       value: 

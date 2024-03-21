@@ -7,6 +7,7 @@ public class isChamDat : MonoBehaviour
 {
    public static bool chamDat = false;
     [SerializeField] private SettingMusicAndSound setting;
+    [SerializeField] private GameManager gameManager;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -18,8 +19,13 @@ public class isChamDat : MonoBehaviour
         }
         if (collision.CompareTag("DeadPoint"))
         {
+            if (setting==null)
+            {
+                return;
+            }
            setting.OnMenuDead();
         }
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -27,6 +33,7 @@ public class isChamDat : MonoBehaviour
         {
             chamDat = true;
         }
+        
     }
  
     private void OnTriggerExit2D(Collider2D collision)
