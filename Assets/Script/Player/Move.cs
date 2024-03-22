@@ -20,13 +20,14 @@ public class Move : MonoBehaviour
     public static int jump;
     private float ngang = 0f;
     private RunAudio audioManager;
-
+    public static GameManager insta;
     // Start is called before the first frame update
     void Start()
     {
         jump = jumpCount;
         tocDoMap = 100f;
         audioManager = RunAudio.instance;
+        insta = gameManager;
     }
 
     private void FixedUpdate()
@@ -131,24 +132,17 @@ public class Move : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // cơ chế dẫm đầu quái thì quái chết
-        /*if (collision.transform.Find("HeadPlant").transform.CompareTag("HeadPlant"))
+        if (collision.gameObject.CompareTag("DeadPoint"))
         {
-            Debug.Log("Quai chet");
-            int score = gameManager.GetScore();
-            gameManager.SetScore(score += 200);
-            Destroy(collision.transform.parent.gameObject);
-
-        }*/
-       
-        if (collision.transform.Find("Body").transform.CompareTag("DeadPoint"))
-        {
-            if (setting==null)
+            Debug.Log("chet : Bị bắn");
+            if (setting == null)
             {
                 return;
             }
             setting.OnMenuDead();
         }
+        // cơ chế dẫm đầu quái thì quái chết
+        
         
     }
     private void OnTriggerEnter2D(Collider2D collision)

@@ -8,8 +8,9 @@ TagManager:
   - EndPoint
   - Coin
   - DeadPoint
+  - Enemy
+  - Bullet
   - HeadPlant
-  - a
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Player
   - Enemies
-  - 
+  - Map
   - 
   - 
   - 

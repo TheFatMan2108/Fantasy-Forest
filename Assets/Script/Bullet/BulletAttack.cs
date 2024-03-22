@@ -12,7 +12,7 @@ public class BulletAttack : MonoBehaviour
     private void Start()
     {
         // sau này làm quái quay theo người chơi
-        huong = -1f;
+        huong = PlantAttack.huong;
         //
         speed = speedShoot;
         Destroy(gameObject, timeDestroy);
@@ -24,6 +24,15 @@ public class BulletAttack : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        GetComponent<Rigidbody2D>().AddForce(new Vector2(speed * huong, GetComponent<Rigidbody2D>().velocity.y));
+        float x = speed * huong;
+        if (Move.insta.GetScore()>3000)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(x, Mathf.Sin(transform.position.x)*9);
+        }else if (Move.insta.GetScore() > 2000)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(x, GetComponent<Rigidbody2D>().velocity.y);
+        }
+       
+       
     }
 }
