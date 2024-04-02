@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7641576197722949425}
   - component: {fileID: 6187918067290432167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3533009620295181101}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoVat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6653919482729951165}
   - component: {fileID: 821066785783213224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: -38785274865634912}
   - component: {fileID: 4900678026294415224}
   - component: {fileID: -1428567785288003709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map3
   m_TagString: Dat
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5785704776189450067}
   - component: {fileID: 5429801482053893546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7579019134651207494}
   - component: {fileID: 9012898634154295194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1015,7 +1015,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3587065917882116680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeadPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8027324566659906451}
   - component: {fileID: 6309040587415670194}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndPoint
   m_TagString: EndPoint
   m_Icon: {fileID: 0}
@@ -1126,7 +1126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4695721666890687904}
   - component: {fileID: 7103477844014224323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -1203,7 +1203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4217503348617159976}
   - component: {fileID: 3750145947857135768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -1280,7 +1280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3341508034841022739}
   - component: {fileID: 5215318653685456270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

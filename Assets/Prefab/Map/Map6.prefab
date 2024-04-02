@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7860746339980654597}
   - component: {fileID: 2248664746236673736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4093000787114852894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoVat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8208039333942874480}
   - component: {fileID: 8129619113491755830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7284529562190900806}
   - component: {fileID: 8255971174467049503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6157352387469872142}
   - component: {fileID: 3221157215331903608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5418294012682896674}
   - component: {fileID: 4146584864731813809}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -434,7 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3243093390456692069}
   - component: {fileID: 2679059959779233896}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndPoint
   m_TagString: EndPoint
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 6012858514954722601}
   - component: {fileID: 4361248563742778857}
   - component: {fileID: -6154169910143770535}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map6
   m_TagString: Dat
   m_Icon: {fileID: 0}
@@ -954,7 +954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 622132866293570983}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeadPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

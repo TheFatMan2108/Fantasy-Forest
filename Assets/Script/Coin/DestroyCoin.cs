@@ -10,11 +10,13 @@ public class DestroyCoin : MonoBehaviour
     [SerializeField] private Move speed;
     [SerializeField] private TMP_Text textScore;
     [SerializeField] private TMP_Text textHighScore;
-    private int tempScore = 0;
+    private int tempScore ;
     private float scoreLevel;
     private RunAudio audioManager;
+    int i;
     private void Awake()
     {
+        
         textScore.SetText("Score " + tempScore.ToString("n0"));
         textHighScore.SetText("High Score " + gameManager.GetHighScore().ToString("n0"));
         scoreLevel = 1000;
@@ -22,9 +24,11 @@ public class DestroyCoin : MonoBehaviour
     private void Start()
     {
         audioManager = RunAudio.instance;
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        tempScore = gameManager.GetScore();
         if (collision.transform.CompareTag("Coin"))
         {
             tempScore += 20;

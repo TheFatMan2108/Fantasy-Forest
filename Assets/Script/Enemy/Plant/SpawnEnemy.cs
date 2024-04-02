@@ -6,17 +6,17 @@ public class SpawnEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject listPoints;
     [SerializeField] private GameObject Enemy;
-    private GameManager gameManager;
+   [SerializeField] private int diem ;
     // Start is called before the first frame update
     private void Awake()
     {
-        gameManager = Move.insta;
-        Debug.Log("sl : "+ listPoints.transform.childCount);
+        diem = Move.insta.GetScore();
     }
     void Start()
     {
-        if (gameManager.GetScore() > 2000f)
+        if (diem > 2000f)
         {
+
             int indexSpawn = Random.Range(0, listPoints.transform.childCount);
             Instantiate(Enemy, listPoints.transform.GetChild(indexSpawn).transform.position, Quaternion.identity,transform);
         }

@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float nhay = 16f;
-    [SerializeField] private Animator animator;
     [SerializeField] private MeshRenderer listMaterial;
     [SerializeField] private GameManager gameManager;
     [SerializeField] private GameObject tochToPlay;
     [SerializeField] private SettingMusicAndSound setting;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private Transform pointShoot;
+    [SerializeField] private Slider sliderHeart;
+    [SerializeField] private Slider sliderStamina;
     private float tocDo = 0;
     private float tocDoMap;
     public static int jumpCount = 2;
@@ -21,13 +25,25 @@ public class Move : MonoBehaviour
     private float ngang = 0f;
     private RunAudio audioManager;
     public static GameManager insta;
-    // Start is called before the first frame update
+    private Animator animator;
+    private bool isAttack;
+    private float countDown;
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX;
+    }
     void Start()
     {
         jump = jumpCount;
         tocDoMap = 100f;
         audioManager = RunAudio.instance;
         insta = gameManager;
+        sliderHeart.maxValue = gameManager.GetMaxHeart();
+        sliderHeart.minValue = gameManager.GetMinHeart();
+        sliderStamina.maxValue = gameManager.GetTimCountMax();
+        sliderStamina.minValue = gameManager.GetTimCountMin();
+        
     }
 
     private void FixedUpdate()
@@ -39,10 +55,18 @@ public class Move : MonoBehaviour
     {
         animator.SetFloat("Jump", rb.velocity.y);
         animator.SetBool("isChamDat", isChamDat.chamDat);
+        sliderHeart.value = gameManager.GetHeart();
+        countDown += Time.deltaTime;
+        sliderStamina.value = countDown;
+        if (countDown>=gameManager.GetTimCountMax())
+        {
+            isAttack=true;
+            countDown=3;
+        }
     }
     private void MapRun()
     {
-        if (listMaterial==null)
+        if (listMaterial == null)
         {
             return;
         }
@@ -76,11 +100,11 @@ public class Move : MonoBehaviour
                     gameManager.SetPLaying(true);
                     tocDo = 7f;
                     animator.SetBool("isRun", true);
+                    GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     if (tochToPlay != null)
                     {
                         tochToPlay.SetActive(false);
                     }
-
                 }
                 else
                 {
@@ -132,29 +156,52 @@ public class Move : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("DeadPoint"))
+        if (collision.gameObject.CompareTag("Bullet") ||
+            collision.gameObject.CompareTag("Plant") ||
+            collision.gameObject.CompareTag("Boar"))
         {
-            Debug.Log("chet : Bị bắn");
-            if (setting == null)
+            float i = gameManager.GetHeart();
+            if (i <= gameManager.GetMinHeart())
             {
-                return;
+                setting.OnMenuDead();
             }
-            setting.OnMenuDead();
+            else
+            {
+                i -= 1;
+                gameManager.SetHeart(i);
+            }
         }
-        // cơ chế dẫm đầu quái thì quái chết
-        
-        
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (setting == null)
+        {
+            return;
+        }
         if (collision.CompareTag("DeadPoint"))
         {
-            Debug.Log("chet : Bị bắn");
-            if (setting == null)
-            {
-                return;
-            }
             setting.OnMenuDead();
+        }
+        
+    }
+    public void OnAttack(InputAction.CallbackContext context)
+    {
+        switch (context.phase)
+        {
+            case InputActionPhase.Started:
+                if (gameManager.GetScore() >= 200f&&isAttack)
+                {
+                    int i = gameManager.GetScore();
+                    gameManager.SetScore((i -= 200));
+                    Instantiate(bullet, pointShoot.position, Quaternion.identity);
+                    isAttack = false;
+                    countDown = 0;
+                }
+                break;
+            case InputActionPhase.Canceled:
+                break;
         }
     }
 }

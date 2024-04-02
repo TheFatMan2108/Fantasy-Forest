@@ -26,6 +26,7 @@ public class SettingMusicAndSound : MonoBehaviour
     public void PlayAgain()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void BackToMenu()
     {

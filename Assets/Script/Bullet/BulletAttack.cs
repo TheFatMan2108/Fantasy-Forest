@@ -28,7 +28,7 @@ public class BulletAttack : MonoBehaviour
         if (Move.insta.GetScore()>3000)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(x, Mathf.Sin(transform.position.x)*9);
-        }else if (Move.insta.GetScore() > 2000)
+        }else
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(x, GetComponent<Rigidbody2D>().velocity.y);
         }

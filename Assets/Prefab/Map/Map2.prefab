@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132929952156197829}
   - component: {fileID: 3983590892166833481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 5664798226756327673}
   - component: {fileID: 7442834922562741744}
   - component: {fileID: 3126657729736902197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map2
   m_TagString: Dat
   m_Icon: {fileID: 0}
@@ -762,6 +762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listPoints: {fileID: 2350634683313165522}
   Enemy: {fileID: 1027827983523485682, guid: 53d68c4b92e193b419a67b81498deca8, type: 3}
+  diem: 0
 --- !u!1 &1154246269628930964
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +773,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4422298640444505506}
   - component: {fileID: 6301907450084425710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -849,7 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6820826271519878898}
   - component: {fileID: 3799339569178095794}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -933,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482410845122262587}
   - component: {fileID: 4083326875457066253}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6446911977438094110}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPointEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1049,7 +1050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7626016143169167950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1081,7 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7270923731925756986}
   - component: {fileID: 1486509775350660449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -1158,7 +1159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 674189304173266114}
   - component: {fileID: 3886086440769341220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4508112370557373035}
   - component: {fileID: 2155565493303184026}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndPoint
   m_TagString: EndPoint
   m_Icon: {fileID: 0}
@@ -1318,7 +1319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7436243539839450670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7332123548226390925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeadPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1383,7 +1384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4387607953729499945}
   - component: {fileID: 5555748185563593015}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1466,7 +1467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3848314271560353997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoVat
   m_TagString: Untagged
   m_Icon: {fileID: 0}

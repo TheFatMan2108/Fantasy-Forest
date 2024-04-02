@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - Bullet
   - HeadPlant
+  - Plant
+  - Boar
   layers:
   - Default
   - TransparentFX

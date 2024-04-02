@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4894428163745008913}
   - component: {fileID: 7834464062060009077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5503684853945277404}
   - component: {fileID: 4812382062112328989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 1452389073579672177}
   - component: {fileID: -3126825584071347278}
   - component: {fileID: 4981205629148924668}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map8
   m_TagString: Dat
   m_Icon: {fileID: 0}
@@ -770,44 +770,20 @@ CompositeCollider2D:
   m_ColliderPaths:
   - m_Collider: {fileID: 7733619072898226614}
     m_ColliderPaths:
-    - - X: 200000000
-        Y: -10000000
-      - X: 120000000
-        Y: -10000000
-      - X: 120000000
-        Y: 0
-      - X: 140000000
-        Y: 0
-      - X: 140000000
-        Y: 10000000
-      - X: 70000000
-        Y: 10000000
-      - X: 70000000
-        Y: 0
-      - X: 90000000
-        Y: 0
-      - X: 90000000
-        Y: -10000000
-      - X: 10000000
-        Y: -10000000
-      - X: 10000000
-        Y: -20000000
-      - X: 200000000
-        Y: -20000000
+    - - X: 5000000
+        Y: 5000000
+      - X: -5000000
+        Y: 5000000
+      - X: -5000000
+        Y: -5000000
+      - X: 5000000
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 19.999971, y: -2}
-      - {x: 19.999971, y: -1}
-      - {x: 12, y: -0.9999706}
-      - {x: 12.00003, y: 0}
-      - {x: 14, y: 0.000029300001}
-      - {x: 13.999971, y: 1}
-      - {x: 7, y: 0.99997073}
-      - {x: 7.0000296, y: 0}
-      - {x: 9, y: -0.0000294}
-      - {x: 8.99997, y: -1}
-      - {x: 1, y: -1.0000293}
-      - {x: 1.0000293, y: -2}
+    - - {x: 0.4999707, y: -0.5}
+      - {x: 0.4999707, y: 0.5}
+      - {x: -0.5, y: 0.4999707}
+      - {x: -0.4999707, y: -0.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -839,6 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listPoints: {fileID: 4991650302742390161}
   Enemy: {fileID: 1027827983523485682, guid: 53d68c4b92e193b419a67b81498deca8, type: 3}
+  diem: 0
 --- !u!1 &1390263601624191551
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3330434637056821445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -880,7 +857,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6874754436500562516}
   - component: {fileID: 2910813492725495745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -964,7 +941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6022057748822422883}
   - component: {fileID: 4544410787461735331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1048,7 +1025,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2933426871859767384}
   - component: {fileID: 6231693959031722987}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7299727259376448882}
   - component: {fileID: 3192351848983180735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2470325138136618140}
   - component: {fileID: 671623572648317689}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,7 +1277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1363510078749002836}
   - component: {fileID: 8172001913298600162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -1376,7 +1353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1983430350713280722}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpawnPointEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1410,7 +1387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9162251855904328106}
   - component: {fileID: 7765918812131398503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7309244468167134121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3613951643180008260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeadPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7679419949581580114}
   - component: {fileID: 6137362217256384578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,7 +1619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654359687056462674}
   - component: {fileID: 7398040969208766594}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1725,7 +1702,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1338473986519894445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoVat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1767,7 +1744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8486930316079023467}
   - component: {fileID: 2547052812200926482}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndPoint
   m_TagString: EndPoint
   m_Icon: {fileID: 0}
@@ -1844,7 +1821,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3818973283383959689}
   - component: {fileID: 6849423669517270242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

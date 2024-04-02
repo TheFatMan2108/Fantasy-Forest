@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4094208920581327536}
   - component: {fileID: 4361688926468167965}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123345603492525088}
   - component: {fileID: 6742178142065398386}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8920696251308458365}
   - component: {fileID: 1505388750954073752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EndPoint
   m_TagString: EndPoint
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5723183661000999385}
   - component: {fileID: 2364476120625300452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -332,7 +332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6207047707172862147}
   - component: {fileID: 1932282981395913874}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: DeadPoint
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5227434625667177601}
   - component: {fileID: 1432442828931046124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -492,7 +492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4971792255494259967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DeadPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -526,7 +526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6073042324169501339}
   - component: {fileID: 7122405887309253283}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 5677240516570412762}
   - component: {fileID: 6667398006386130999}
   - component: {fileID: -1676405945653163360}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Map7
   m_TagString: Dat
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8771342044297905641}
   - component: {fileID: 279159550549863757}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 399031948890477867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoVat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
