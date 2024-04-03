@@ -161,7 +161,7 @@ public class Move : MonoBehaviour
             collision.gameObject.CompareTag("Boar"))
         {
             float i = gameManager.GetHeart();
-            if (i <= gameManager.GetMinHeart())
+            if (i <= 1)
             {
                 setting.OnMenuDead();
             }

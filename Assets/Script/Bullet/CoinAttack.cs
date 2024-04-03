@@ -25,10 +25,6 @@ public class CoinAttack : MonoBehaviour
         if (!collision.CompareTag("Player")&&!collision.CompareTag("Coin") && !collision.CompareTag("EndPoint"))
         {
             Destroy(gameObject);
-            if (!collision.CompareTag("Dat"))
-            {
-                Destroy(collision.gameObject);
-            }
         }
 
     }

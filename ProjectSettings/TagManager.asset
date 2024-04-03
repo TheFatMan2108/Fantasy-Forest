@@ -13,6 +13,8 @@ TagManager:
   - HeadPlant
   - Plant
   - Boar
+  - BulletCoin
+  - Meteorite
   layers:
   - Default
   - TransparentFX
