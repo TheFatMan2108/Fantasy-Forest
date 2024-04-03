@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 3138393305976570354}
   m_Layer: 7
   m_Name: Plant
-  m_TagString: Boar
+  m_TagString: Plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

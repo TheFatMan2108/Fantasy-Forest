@@ -7,12 +7,11 @@ public class CoinAttack : MonoBehaviour
     [SerializeField] private float tocDo;
     [SerializeField] private float huong;
     [SerializeField] private float time;
-    [SerializeField] private List<AudioClip> sounds;
+    [SerializeField] private AudioSource SFX;
     void Start()
     {
         Destroy(gameObject, time);
-        GetComponent<AudioSource>().clip = sounds[0];
-        GetComponent<AudioSource>().Play();
+        SFX.Play();
     }
 
     // Update is called once per frame
@@ -23,11 +22,13 @@ public class CoinAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player")&&!collision.CompareTag("Coin"))
+        if (!collision.CompareTag("Player")&&!collision.CompareTag("Coin") && !collision.CompareTag("EndPoint"))
         {
-            GetComponent<AudioSource>().clip = sounds[1];
-            GetComponent<AudioSource>().Play();
             Destroy(gameObject);
+            if (!collision.CompareTag("Dat"))
+            {
+                Destroy(collision.gameObject);
+            }
         }
 
     }

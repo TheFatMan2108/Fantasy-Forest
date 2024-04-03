@@ -24,7 +24,12 @@ public class DestroyCoin : MonoBehaviour
     private void Start()
     {
         audioManager = RunAudio.instance;
-       
+        
+    }
+    private void Update()
+    {
+        textScore.SetText("Score " + gameManager.GetScore().ToString("n0"));
+        textHighScore.SetText("High Score " + gameManager.GetHighScore().ToString("n0"));
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -35,8 +40,6 @@ public class DestroyCoin : MonoBehaviour
             tangTocTheoDiem();
             gameManager.SetScore(tempScore);
             gameManager.SetHighScore(tempScore);
-            textScore.SetText("Score " + tempScore.ToString("n0"));
-            textHighScore.SetText("High Score " + gameManager.GetHighScore().ToString("n0"));
             Destroy(collision.gameObject);
             if (audioManager==null)
             {

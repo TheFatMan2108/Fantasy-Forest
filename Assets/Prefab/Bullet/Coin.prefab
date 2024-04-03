@@ -271,9 +271,7 @@ MonoBehaviour:
   tocDo: 10
   huong: 1
   time: 10
-  sounds:
-  - {fileID: 8300000, guid: 7a632d196cea0d140972c11e87809408, type: 3}
-  - {fileID: 8300000, guid: 7135032630cbfac43bb7cba015bf46c7, type: 3}
+  SFX: {fileID: 1808680755234939452}
 --- !u!82 &1808680755234939452
 AudioSource:
   m_ObjectHideFlags: 0
@@ -283,8 +281,8 @@ AudioSource:
   m_GameObject: {fileID: 6413517215492677281}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 980916618024978494, guid: c176f6fab8578ec4ab5c8bb91526e6e6, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5d24a75287bf4c441a68962007b387ee, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
