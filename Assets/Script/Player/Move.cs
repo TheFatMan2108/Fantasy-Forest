@@ -60,7 +60,6 @@ public class Move : MonoBehaviour
         sliderStamina.value = countDown;
         if (countDown>=gameManager.GetTimCountMax())
         {
-            isAttack=true;
             countDown=3;
         }
     }
@@ -191,13 +190,12 @@ public class Move : MonoBehaviour
         switch (context.phase)
         {
             case InputActionPhase.Started:
-                if (gameManager.GetScore() >= 200f&&isAttack)
+                if (gameManager.GetScore() >= 200f&&countDown>1)
                 {
                     int i = gameManager.GetScore();
                     gameManager.SetScore((i -= 200));
                     Instantiate(bullet, pointShoot.position, Quaternion.identity);
-                    isAttack = false;
-                    countDown = 0;
+                    countDown -= 1;
                 }
                 break;
             case InputActionPhase.Canceled:

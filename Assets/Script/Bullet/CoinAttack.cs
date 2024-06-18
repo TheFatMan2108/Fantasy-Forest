@@ -22,7 +22,7 @@ public class CoinAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player")&&!collision.CompareTag("Coin") && !collision.CompareTag("EndPoint"))
+        if (!collision.CompareTag("Player")&&!collision.CompareTag("Coin") && !collision.CompareTag("EndPoint") && !collision.CompareTag("BulletCoin"))
         {
             Destroy(gameObject);
         }

@@ -40,6 +40,5 @@ public class DayNight : MonoBehaviour
         }
 
         light2D.intensity = light;
-        Debug.Log("Light " + light);
     }
 }
