@@ -1486,7 +1486,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8.04
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1511,7 +1511,7 @@ Transform:
   m_GameObject: {fileID: 463371041}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.227716, y: 1.3438311, z: -10}
+  m_LocalPosition: {x: 10.902739, y: 2.195031, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3645,7 +3645,7 @@ MonoBehaviour:
   m_Follow: {fileID: 105030139}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 8.04
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -3671,7 +3671,7 @@ Transform:
   m_GameObject: {fileID: 1016530687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -952.7723, y: -538.6562, z: -10}
+  m_LocalPosition: {x: -949.0973, y: -537.805, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4113,8 +4113,8 @@ Transform:
   m_GameObject: {fileID: 1256274224}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -1.4249, y: 1.5, z: 32.2}
-  m_LocalScale: {x: 2.7030084, y: 1, z: 1.4568503}
+  m_LocalPosition: {x: 0.6192, y: -0.5959, z: 32.2}
+  m_LocalScale: {x: 3.1118414, y: 1, z: 1.8759862}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 463371044}
