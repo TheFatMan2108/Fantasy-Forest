@@ -159,16 +159,17 @@ public class Move : MonoBehaviour
             collision.gameObject.CompareTag("Plant") ||
             collision.gameObject.CompareTag("Boar"))
         {
-            float i = gameManager.GetHeart();
-            if (i <= 1)
-            {
-                setting.OnMenuDead();
-            }
-            else
-            {
-                i -= 1;
-                gameManager.SetHeart(i);
-            }
+            /* float i = gameManager.GetHeart();
+             if (i <= 1)
+             {
+                 setting.OnMenuDead();
+             }
+             else
+             {
+                 i -= 1;
+                 gameManager.SetHeart(i);
+             }*/
+            setting.OnMenuDead();
         }
 
 
@@ -179,7 +180,7 @@ public class Move : MonoBehaviour
         {
             return;
         }
-        if (collision.CompareTag("DeadPoint"))
+        if (collision.CompareTag("DeadPoint")|| collision.CompareTag("Bullet"))
         {
             setting.OnMenuDead();
         }
@@ -187,7 +188,7 @@ public class Move : MonoBehaviour
     }
     public void OnAttack(InputAction.CallbackContext context)
     {
-        switch (context.phase)
+       /* switch (context.phase)
         {
             case InputActionPhase.Started:
                 if (gameManager.GetScore() >= 200f&&countDown>1)
@@ -200,6 +201,6 @@ public class Move : MonoBehaviour
                 break;
             case InputActionPhase.Canceled:
                 break;
-        }
+        }*/
     }
 }
